@@ -27,7 +27,7 @@ try{
         $rows_c = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }catch(PDOException $ex) {
-	echo "There are some problems in our database. Please try again later.";
+	echo $ex;
 	exit;
 }
 

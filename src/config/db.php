@@ -1,7 +1,7 @@
 <?php
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-$db_hostname='localhost'; $db_username='root'; $db_password='root'; $dbname='miniblog_db';
+$db_hostname='localhost'; $db_username='root'; $db_password='kEloMpOk_lIMA'; $dbname='kpi5';
 try {
 	$db = new PDO('mysql:host='.$db_hostname.';dbname='.$dbname.';charset=utf8', $db_username, $db_password);
 	$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);

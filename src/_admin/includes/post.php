@@ -1,6 +1,7 @@
 <?php
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 include 'process/postProcess.php';
+session_start();
 $_SESSION['captcha'] = simple_php_captcha();
 ?>
 <html>

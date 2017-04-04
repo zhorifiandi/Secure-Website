@@ -27,7 +27,7 @@ include 'functionList.php';
                 )){
 
                     $userid=getUserId();
-                    $title=$_POST["title"];
+                    $title=htmlspecialchars($_POST["title"]);
                     $content=$_POST["content"];
                     $status =(isset($_POST["submit"]))?"posted":"draft";
                     
@@ -46,7 +46,7 @@ include 'functionList.php';
                         //$statement->debugDumpParams();
                     }else {                    
                         
-                        $statement = $db->prepare("INSERT INTO POST(user_id,title,created_date,content,last_updated,status) 
+                        $statement = $db->prepare("INSERT INTO post(user_id,title,created_date,content,last_updated,status) 
                                                 VALUES(?,?,?,?,now(),?)");
                         
                         $statement->execute(array(
@@ -62,7 +62,7 @@ include 'functionList.php';
                 }else {
                     $msg = "Captcha salah atau Judul artikel dan Konten kosong";
                     $rows['content'] = $_POST['content'];
-                    $rows['title'] = $_POST['title'];
+                    $rows['title'] = htmlspecialchars($_POST['title']);
                     
                 }
                 
@@ -75,5 +75,5 @@ include 'functionList.php';
                
             }
     }catch (PDOException $e){
-        echo "Terjadi kesalahan!";
+        echo 'Exception bro!';
     }  

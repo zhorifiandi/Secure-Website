@@ -7,10 +7,10 @@ include '../_admin/includes/process/functionList.php';
 if ( isset($_POST["name"]) && isset($_POST["email"]) && (isset($_POST["xid"]) and !empty($_POST["xid"])) ) {
 	if (($_SESSION['captcha']['code']==$_POST['captcha']) && (!empty($_POST['comment']) && (!empty($_POST['name'])) && (!empty($_POST['email'])))){
 
-		$author_c = $_POST['name'];
-		$post_id = $_POST['xid'];
-		$email_c = $_POST['email'];
-		$content_c = $_POST['comment'];
+		$author_c = htmlspecialchars($_POST['name']);
+		$post_id = htmlspecialchars($_POST['xid']);
+		$email_c = htmlspecialchars($_POST['email']);
+		$content_c = htmlspecialchars($_POST['comment']);
 		$created_date_c = date('d F Y H:i');
 		
 		$email_c = filter_var($email_c, FILTER_SANITIZE_EMAIL);
@@ -34,7 +34,8 @@ if ( isset($_POST["name"]) && isset($_POST["email"]) && (isset($_POST["xid"]) an
 					</div>'; 
 			
 		}catch(PDOException $ex) {
-			echo "Error! There are some problems in our database. Please try again later.";
+echo "Error! There are some problems in our database. Please try again later.";
+			echo $ex;
 			exit;
 		}
 

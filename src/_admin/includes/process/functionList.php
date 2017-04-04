@@ -29,15 +29,15 @@ function getUserId(){
 //  A simple PHP CAPTCHA script
 //  Copyright 2011 by Cory LaViska for A Beautiful Site, LLC
 function simple_php_captcha($config = array()) {
-    $path = str_replace("\\includes\\process","\\",dirname(__FILE__));
+    $path = str_replace("/includes/process","/",dirname(__FILE__));
 	
     // Check for GD library
     if( !function_exists('gd_info') ) {
         throw new Exception('Required GD library is missing');
     }
 
-    $bg_path = $path.'img\\';
-    $font_path = $path.'fonts\\';
+    $bg_path = $path.'img/';
+    $font_path = $path.'fonts/';
     // Default values
     $captcha_config = array(
         'code' => '',

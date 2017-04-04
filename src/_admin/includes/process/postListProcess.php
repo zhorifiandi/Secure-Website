@@ -2,6 +2,11 @@
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 include 'functionList.php';
 try{
+	if (isset($_POST['CSRFtoken'])) {
+    		if (strcmp($_SESSION['CSRFtoken'],$_POST['CSRFtoken']) !== 0) {
+			exit;
+        	}
+	}   
 	unset($_SESSION['post_id']); 
 	if (getUserRole()==1){
 		$stmt = $db->prepare("SELECT u.name,SHA1(post_id) AS post_id,title,created_date,concat(substr(content,1,100),'"." ..."."') as content,last_updated,p.status 

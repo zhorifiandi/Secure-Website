@@ -1,5 +1,7 @@
 <?php
 include 'process/postListProcess.php';  
+session_start();
+$_SESSION['CSRFtoken'] = hash('sha512', rand());
 $user_role = getUserRole();
 ?>
 <div class="wrapper">
@@ -34,6 +36,7 @@ $user_role = getUserRole();
             echo '<form method="post" action="'.$base_url.'/postlist/process" >
             <input type="hidden" name="_token" value="'.sha1(getUserId()).'" />
             <input type="hidden" name="_track" value="'.$post_id.'" />
+	    <input type="hidden" name="CSRFtoken" value="'.$_SESSION["CSRFtoken"].'" />
             <tr>                
                 <td>'.$title.'</td>
                 <td>'.$creted_date.'</td>
