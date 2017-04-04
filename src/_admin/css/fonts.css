@@ -1,0 +1,20 @@
+@font-face{
+    font-family:'Source Sans Pro';font-style:normal;font-weight:300;src:local("Source Sans Pro Light"),local("SourceSansPro-Light"),
+    url(../../assets/source-sans-pro/SourceSansPro-Light.ttf-019ca37a258e1ee9942c9c733a3193171b651931a02527b836e3644b9fdd7c12.woff2) format("woff2"),
+    url(../../assets/source-sans-pro/SourceSansPro-Light.ttf-3703c43c798f137e5e38f8dc60cafb761cc792f85fcbbc60148eae0cd165a5e8.woff) format("woff")
+}
+@font-face{
+    font-family:'Source Sans Pro';font-style:normal;font-weight:400;src:local("Source Sans Pro"),local("SourceSansPro-Regular"),
+    url(../../assets/source-sans-pro/SourceSansPro-Regular.ttf-27c06ca531d01f12d9e28d869000985e4cf84dd0724afe578e942d44f09d19c2.woff2) format("woff2"),
+    url(../../assets/source-sans-pro/SourceSansPro-Regular.ttf-0ab72d9ee658b0ee28c414ecf5a304421a14f1bdb585ab17c034c037cd215ab7.woff) format("woff")
+}
+@font-face{
+    font-family:'Source Sans Pro';font-style:normal;font-weight:600;src:local("Source Sans Pro Semibold"),local("SourceSansPro-Semibold"),
+    url(../../assets/source-sans-pro/SourceSansPro-Semibold.ttf-b96f55ccea2c4ad959ca841fa881a893e7df33a2e575d621a81d2f1063b429c4.woff2) format("woff2"),
+    url(../../assets/source-sans-pro/SourceSansPro-Semibold.ttf-063e7b1ecf947f422a490ecd3bc2440095e55b371d781f9f93fae340e2d6caad.woff) format("woff")
+}
+@font-face{
+    font-family:'Source Sans Pro';font-style:normal;font-weight:700;src:local("Source Sans Pro Bold"),local("SourceSansPro-Bold"),
+    url(../../assets/source-sans-pro/SourceSansPro-Bold.ttf-929f75e2093d43828eaaa71f7e3a08646e7291c9ba076bda3fa566bcbd804735.woff2) format("woff2"),
+    url(../../assets/source-sans-pro/SourceSansPro-Bold.ttf-57fb1f7f5ac0cc6b1ba09c70b762524eff720df9dd678c11924bb4978a7e0085.woff) format("woff")
+}
